@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soma e média de 5 números</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Soma e média de 5 números</h1>
+	<label>Digite o primeiro número: <input type="number" id="num1"></label><br>
+	<label>Digite o segundo número: <input type="number" id="num2"></label><br>
+	<label>Digite o terceiro número: <input type="number" id="num3"></label><br>
+	<label>Digite o quarto número: <input type="number" id="num4"></label><br>
+	<label>Digite o quinto número: <input type="number" id="num5"></label><br>
+	<button onclick="calcularSomaEMedia()">Calcular soma e média</button>
+	<p id="resultado"></p>
+
+	<script>
+		function calcularSomaEMedia() {
+			// Obtém os valores dos números digitados
+			const num1 = parseFloat(document.getElementById('num1').value);
+			const num2 = parseFloat(document.getElementById('num2').value);
+			const num3 = parseFloat(document.getElementById('num3').value);
+			const num4 = parseFloat(document.getElementById('num4').value);
+			const num5 = parseFloat(document.getElementById('num5').value);
+
+			// Calcula a soma e a média
+			const soma = num1 + num2 + num3 + num4 + num5;
+			const media = soma / 5;
+
+			// Exibe o resultado
+			const resultado = document.getElementById('resultado');
+			resultado.innerHTML = 'A soma dos números é ' + soma + ' e a média é ' + media;
+		}
+	</script>
+</body>
+</html>

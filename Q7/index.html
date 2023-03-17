@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encontrando o maior número</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Encontrando o maior número</h1>
+	<label>Digite o primeiro número: <input type="number" id="num1"></label><br>
+	<label>Digite o segundo número: <input type="number" id="num2"></label><br>
+	<label>Digite o terceiro número: <input type="number" id="num3"></label><br>
+	<label>Digite o quarto número: <input type="number" id="num4"></label><br>
+	<label>Digite o quinto número: <input type="number" id="num5"></label><br>
+	<button onclick="encontrarMaior()">Encontrar o maior número</button>
+
+	<script>
+		function encontrarMaior() {
+			// Obtém os valores dos números digitados
+			const num1 = parseFloat(document.getElementById('num1').value);
+			const num2 = parseFloat(document.getElementById('num2').value);
+			const num3 = parseFloat(document.getElementById('num3').value);
+			const num4 = parseFloat(document.getElementById('num4').value);
+			const num5 = parseFloat(document.getElementById('num5').value);
+
+			// Encontra o maior número
+			let maior = num1;
+			if (num2 > maior) {
+				maior = num2;
+			}
+			if (num3 > maior) {
+				maior = num3;
+			}
+			if (num4 > maior) {
+				maior = num4;
+			}
+			if (num5 > maior) {
+				maior = num5;
+			}
+
+			// Exibe o maior número
+			alert('O maior número é ' + maior);
+		}
+	</script>
+</body>
+</html>

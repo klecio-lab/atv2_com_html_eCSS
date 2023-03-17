@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>População dos Países</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>População dos Países</h1>
+		<form id="formulario">
+			<div>
+				<label for="popA">População do país A:</label>
+				<input type="number" id="popA" required>
+			</div>
+			<div>
+				<label for="taxaA">Taxa de crescimento do país A:</label>
+				<input type="number" id="taxaA" step="0.01" min="0" required>
+			</div>
+			<div>
+				<label for="popB">População do país B:</label>
+				<input type="number" id="popB" required>
+			</div>
+			<div>
+				<label for="taxaB">Taxa de crescimento do país B:</label>
+				<input type="number" id="taxaB" step="0.01" min="0" required>
+			</div>
+			<div>
+				<button type="submit">Calcular</button>
+			</div>
+		</form>
+		<div id="resultado"></div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

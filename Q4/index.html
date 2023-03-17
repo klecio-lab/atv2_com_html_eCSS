@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>População dos Países</title>
+  </head>
+  <body>
+    <script>
+		let populacaoA = 80000;
+		let populacaoB = 200000;
+		let taxaCrescimentoA = 0.03;
+		let taxaCrescimentoB = 0.015;
+		let anos = 0;
+		
+		while (populacaoA < populacaoB) {
+		  populacaoA += populacaoA * taxaCrescimentoA;
+		  populacaoB += populacaoB * taxaCrescimentoB;
+		  anos++;
+		}
+		
+		alert(`Serão necessários ${anos} anos para a população de A ultrapassar ou igualar a população de B.`);
+		
+    </script>
+  </body>
+</html>

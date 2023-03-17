@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validação de informações</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		label, input, select {
+			margin: 5px;
+			font-size: 18px;
+		}
+
+		input[type="submit"] {
+			margin-top: 10px;
+			padding: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		.error {
+			color: red;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<form id="my-form">
+		<label for="name">Nome:</label>
+		<input type="text" id="name" name="name">
+
+		<label for="age">Idade:</label>
+		<input type="number" id="age" name="age">
+
+		<label for="salary">Salário:</label>
+		<input type="number" id="salary" name="salary">
+
+		<label for="gender">Sexo:</label>
+		<input type="radio" id="female" name="gender" value="f"><label for="female">Feminino</label>
+		<input type="radio" id="male" name="gender" value="m"><label for="male">Masculino</label>
+
+		<label for="marital-status">Estado civil:</label>
+		<select id="marital-status" name="marital-status">
+			<option value="s">Solteiro(a)</option>
+			<option value="c">Casado(a)</option>
+			<option value="v">Viúvo(a)</option>
+			<option value="d">Divorciado(a)</option>
+		</select>
+
+		<input type="submit" value="Enviar">
+	</form>
+	<div id="error-message"></div>
+
+	<script src="script.js"></script>
+</body>
+</html>

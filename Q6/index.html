@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exibindo números</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Números de 1 a 20</h1>
+	<div id="numeros"></div>
+
+	<script>
+		const numerosDiv = document.getElementById('numeros');
+
+		// Imprime os números um abaixo do outro
+		for (let i = 1; i <= 20; i++) {
+			numerosDiv.innerHTML += i + '<br>';
+		}
+
+		// Imprime os números um ao lado do outro
+		numerosDiv.innerHTML += '<br>';
+		for (let i = 1; i <= 20; i++) {
+			numerosDiv.innerHTML += i + ' ';
+		}
+	</script>
+</body>
+</html>

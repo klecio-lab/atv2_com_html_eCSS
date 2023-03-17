@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intervalo de Números Inteiros</title>
+	<meta charset="UTF-8">
+	<style>
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Intervalo de Números Inteiros</h1>
+	<form>
+		<label for="numero1">Número 1:</label>
+		<input type="number" id="numero1" name="numero1" required>
+		
+		<label for="numero2">Número 2:</label>
+		<input type="number" id="numero2" name="numero2" required>
+		
+		<button type="button" onclick="gerarIntervalo()">Gerar Intervalo</button>
+	</form>
+
+	<p id="resultado"></p>
+
+	<script>
+		function gerarIntervalo() {
+			// Obtém os valores dos números informados pelo usuário
+			const numero1 = parseInt(document.getElementById('numero1').value);
+			const numero2 = parseInt(document.getElementById('numero2').value);
+
+			// Verifica se os valores são números inteiros
+			if (Number.isInteger(numero1) && Number.isInteger(numero2)) {
+				// Determina o menor e o maior número do intervalo
+				const menor = numero1 < numero2 ? numero1 : numero2;
+				const maior = numero1 > numero2 ? numero1 : numero2;
+
+				// Inicializa uma variável para armazenar a lista de números do intervalo
+				let numeros = '';
+
+				// Loop de menor a maior número do intervalo
+				for (let i = menor; i <= maior; i++) {
+					// Adiciona o número à lista de números do intervalo
+					numeros += i + ' ';
+				}
+
+				// Exibe a lista de números do intervalo na página HTML
+				const resultado = document.getElementById('resultado');
+				resultado.innerHTML = 'O intervalo de números inteiros entre ' + menor + ' e ' + maior + ' é: ' + numeros;
+			} else {
+				// Exibe uma mensagem de erro se os valores informados não forem números inteiros
+				alert('Por favor, informe dois números inteiros.');
+			}
+		}
+	</script>
+</body>
+</html>
